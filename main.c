@@ -26,17 +26,29 @@ int main() {
     //Размерности полей боевых действий
     int nA = 0, mA = 0, nT = 0, mT = 0;
     printf("Anchuariya field size:\n");
-    scanf("%d %d", &nA, &mA);
+    if (!scanf("%d %d", &nA, &mA)) {
+        printf("Wrong Input\n");
+        return -1;
+    }
     printf("Taranteria field size:\n");
-    scanf("%d %d", &nT, &mT);
+    if (!scanf("%d %d", &nT, &mT)) {
+        printf("Wrong Input\n");
+        return -1;
+    }
 
     int projectilePrice = 0;
     printf("Projectile price\n");
-    scanf("%d", &projectilePrice);
+    if (!scanf("%d", &projectilePrice)) {
+        printf("Wrong Input\n");
+        return -1;
+    }
 
     int projectilePower = 0;
     printf("Projectile power\n");
-    scanf("%d", &projectilePower);
+    if (!scanf("%d", &projectilePower)) {
+        printf("Wrong Input\n");
+        return -1;
+    }
 
     //Создали матрицу поля боевых действий
     printf("Creating war map...\n");
